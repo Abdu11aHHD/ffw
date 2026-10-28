@@ -1,0 +1,1 @@
+{"name":"adheed-database-tests","private":true,"type":"module","scripts":{"test":"node --test workflow.test.mjs"},"dependencies":{"@electric-sql/pglite":"0.5.13"}}

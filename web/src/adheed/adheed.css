@@ -1,0 +1,33 @@
+@tailwind components;
+@tailwind utilities;
+.adh-root {
+ --sp-bg: var(--color-page); --sp-surface: var(--color-surface);
+ --sp-surface-2: var(--color-surface-muted); --sp-surface-3: var(--color-nav-pill);
+ --sp-border: var(--color-border); --sp-primary: var(--color-primary);
+ --sp-primary-strong: var(--color-primary-strong); --sp-primary-soft: var(--color-primary-soft);
+ --sp-text: var(--color-text); --sp-text-2: var(--color-text-muted); --sp-text-3: var(--color-text-subtle);
+ --sp-mint: var(--color-teal); --sp-mint-soft: var(--color-mint);
+ --sp-ok: var(--color-green); --sp-ok-soft: var(--color-green-soft);
+ --sp-danger: var(--color-danger); --sp-danger-soft: var(--color-red-soft);
+ --sp-warn: #b67718; --sp-warn-soft: var(--color-orange-soft); --sp-unread: var(--color-notification-dot);
+ color: var(--sp-text); font-family: var(--font-family); line-height: 1.65;
+}
+.adh-root *, .adh-root *::before, .adh-root *::after { border-width: 0; border-style: solid; border-color: var(--sp-border); box-sizing: border-box; }
+.adh-root button, .adh-root input, .adh-root textarea, .adh-root select { font: inherit; }
+.adh-root button { cursor: pointer; }
+.adh-root input, .adh-root textarea, .adh-root select { background: var(--sp-surface-2); color: var(--sp-text); }
+.adh-root .sp-scroll { padding-bottom: 24px; }
+.adh-root .sp-ltr { direction: ltr; unicode-bidi: isolate; }
+.adh-root .sp-pressable { transition: transform .12s, background .15s; }
+.adh-root .sp-pressable:active { transform: scale(.98); }
+.adh-root .sp-enter { animation: adh-enter .2s ease both; }
+.adh-root .sp-skeleton { background: var(--sp-surface-3); animation: adh-pulse 1.4s infinite; }
+.adh-root .sp-grow { transition: width .3s; }
+.adh-demo { margin: 12px 16px; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: 10px; font-size: 12px; background: var(--color-badge-bg); color: var(--color-badge-text); }
+.adh-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 8px 16px 16px; font-size: 12px; }
+.adh-tools a, .adh-tools button { color: var(--color-link); text-decoration: underline; }
+.adh-root .adh-header { position: static; background: var(--sp-bg); }
+.adh-root .adh-review-table { overflow-x: auto; }
+@keyframes adh-enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes adh-pulse { 50% { opacity: .5; } }
+@media (prefers-reduced-motion: reduce) { .adh-root *, .adh-root *::before { animation: none !important; transition: none !important; } }

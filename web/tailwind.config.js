@@ -1,0 +1,40 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/adheed/**/*.{ts,tsx}'],
+  important: '#adheed-feature',
+  corePlugins: { preflight: false },
+  theme: {
+    extend: {
+      colors: {
+        bg: 'var(--sp-bg)',
+        canvas: 'var(--sp-canvas)',
+        surface: 'var(--sp-surface)',
+        'surface-2': 'var(--sp-surface-2)',
+        'surface-3': 'var(--sp-surface-3)',
+        line: 'var(--sp-border)',
+        primary: 'var(--sp-primary)',
+        'primary-strong': 'var(--sp-primary-strong)',
+        'primary-soft': 'var(--sp-primary-soft)',
+        ink: 'var(--sp-text)',
+        'ink-2': 'var(--sp-text-2)',
+        'ink-3': 'var(--sp-text-3)',
+        unread: 'var(--sp-unread)',
+        mint: 'var(--sp-mint)',
+        'mint-soft': 'var(--sp-mint-soft)',
+        warn: 'var(--sp-warn)',
+        'warn-soft': 'var(--sp-warn-soft)',
+        danger: 'var(--sp-danger)',
+        'danger-soft': 'var(--sp-danger-soft)',
+        ok: 'var(--sp-ok)',
+        'ok-soft': 'var(--sp-ok-soft)',
+      },
+      fontFamily: {
+        sans: ['"Noto Sans Arabic"', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+      },
+      borderRadius: { card: '12px', tile: '11px', pill: '999px' },
+      maxWidth: { app: '480px' },
+      boxShadow: { tile: '0 1px 0 rgba(255,255,255,0.03) inset' },
+    },
+  },
+  plugins: [],
+};

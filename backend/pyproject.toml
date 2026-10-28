@@ -1,0 +1,14 @@
+[project]
+name = "sukkar-plus-api"
+version = "1.0.0"
+description = "Sukkar Plus — Python/FastAPI backend for the diabetes-care prototype"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
